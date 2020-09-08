@@ -1,0 +1,137 @@
+/* Section Images */
+section#home {
+  background: url("../../images/home1.jpg") no-repeat center center/cover;
+}
+
+#showcase h1 {
+  /* font-size: 50px;
+  line-height: 1; */
+  position: relative;
+  animation: heading, bounceIn;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  /* animation-iteration-count: 3s, infinite; */
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+h1:hover {
+  transform: rotateY(180deg);
+}
+
+@keyframes heading {
+  0% {
+    top: -900px;
+  }
+  100% {
+    top: 10px;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#content {
+  position: relative;
+  animation-name: content;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes content {
+  0% {
+    left: -1000px;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+.box {
+  background: white;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  /* animation-delay: 2s;
+   */
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+
+@keyframes myAnimation {
+  0% {
+    background-color: gainsboro;
+    left: 0px;
+    top: 0px;
+    border-radius: 0 0 0 0;
+  }
+  25% {
+    background-color: palevioletred;
+    left: 700px;
+    top: 0px;
+    border-radius: 50% 0 0 0;
+  }
+  50% {
+    background-color: pink;
+    left: 700px;
+    top: 700px;
+    border-radius: 50% 50% 0 0;
+  }
+  75% {
+    background-color: brown;
+    left: 0px;
+    top: 300;
+    border-radius: 50% 50% 50% 50%;
+  }
+  100% {
+    background-color: white;
+    left: 0px;
+    top: 0px;
+    border-radius: 50% 50% 50% 50%;
+  }
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  border: black 1px dotted;
+  color: black;
+  margin-top: 40px;
+  opacity: 0;
+  animation: button;
+  animation-duration: 3s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.btn:hover {
+  transform: rotateY(180deg);
+}
+
+@keyframes button {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
